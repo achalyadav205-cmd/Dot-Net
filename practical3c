@@ -1,0 +1,43 @@
+using System;
+using System.Dynamic;
+
+    class BankAccount
+    {
+        public int AccountNumber;
+
+    private double balance { get; set; }
+        public double Balance
+        { 
+            get
+            {
+                return balance;
+            }
+            set
+            {
+                if (value >= 0)
+                {
+                    balance = value;
+                }
+                else
+                {
+                    Console.WriteLine("Balance Cannot Be Negative.");
+                }
+
+            }
+        }
+    }
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            BankAccount account = new BankAccount();
+            account.AccountNumber = 1334;
+            account.Balance = 100;
+
+            Console.WriteLine("Account Number: " + account.AccountNumber);
+            Console.WriteLine("Balance: " + account.Balance);
+
+            account.Balance = -1000;
+        Console.WriteLine("Achal Yadav T055");
+        }
+    }
